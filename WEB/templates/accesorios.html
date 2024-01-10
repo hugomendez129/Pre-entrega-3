@@ -1,0 +1,24 @@
+{% extends "padre.html" %}
+{% block titulo_accesorios %}
+<header class="masthead">
+    <div class="container position-relative">
+        <div class="row justify-content-center">
+            <div class="col-xl-6">
+                <div class="text-center text-white">
+                    <!-- Page heading-->
+                    
+                    <h1 class="mb-5">Guardamos un accesorio</h1>
+                    <body>                                          <!-- esto para darle permiso-->
+                        <form action="" method="POST">   {% csrf_token %}<!-- mandamos a guardar con post y coloco que vamos a nuevaserie-->
+                        
+                        {{mi_formu.as_p}}
+                    
+                        <input type="submit" value="guardar">
+                        </form>
+                    </body>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        {% endblock %}
